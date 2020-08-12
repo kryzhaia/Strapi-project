@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-accesses",
+      "handler": "user-access.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-accesses/count",
+      "handler": "user-access.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-accesses/:id",
+      "handler": "user-access.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-accesses",
+      "handler": "user-access.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-accesses/:id",
+      "handler": "user-access.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-accesses/:id",
+      "handler": "user-access.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

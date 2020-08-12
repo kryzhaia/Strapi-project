@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "name": "Course"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "lessons": {
+      "via": "course",
+      "collection": "lesson"
+    },
+    "user_accesses": {
+      "via": "courses",
+      "collection": "user-access"
+    }
+  }
+}

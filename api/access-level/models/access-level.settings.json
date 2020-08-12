@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "access_levels",
+  "info": {
+    "name": "access_level"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "lessons": {
+      "collection": "lesson",
+      "via": "access_levels"
+    },
+    "code": {
+      "type": "string"
+    }
+  }
+}

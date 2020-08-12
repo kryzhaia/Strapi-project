@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_accesses",
+  "info": {
+    "name": "user_access"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "user_accesses"
+    },
+    "access_level": {
+      "model": "access-level"
+    },
+    "courses": {
+      "collection": "course",
+      "via": "user_accesses",
+      "dominant": true
+    }
+  }
+}

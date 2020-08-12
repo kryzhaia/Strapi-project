@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lessons",
+  "info": {
+    "name": "Lesson"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "video_url": {
+      "type": "string"
+    },
+    "course": {
+      "model": "course",
+      "via": "lessons"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "access_levels": {
+      "via": "lessons",
+      "collection": "access-level",
+      "dominant": true
+    }
+  }
+}
